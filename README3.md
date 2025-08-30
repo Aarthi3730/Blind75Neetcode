@@ -1,0 +1,42 @@
+Encode and Decode Strings
+1.here the variable input with Array(String) data tyoe and values are "neet","code","love","you" we need to encode and decode it
+-------------------------------
+encoding how to do?
+if we see the input the letters cound is 4 4 4 3 so we will create a string by adding letter count and a # in between in this way we can encode it
+---------------------------------------
+decoding:
+i → points to the start of the current segment
+j → moves forward to find the #
+Start with i = 0.
+Move j until # is found:
+s.charAt(0) = 4, s.charAt(1) = #.
+Stop at j = 1.
+Substring from i to j = "4".
+Convert to integer: length = 4.
+Move i past the #: i = j + 1 = 2.
+Extract the next length (4) characters starting at i:
+s.substring(2, 6) = "neet".
+Add "neet" to result: ["neet"].
+Move i forward by length: i = 6
+i = 6.
+Move j until #: j = 7.
+Substring s.substring(6, 7) = "4" → length = 4.
+Move i to 8 (after #).
+Extract s.substring(8, 12) = "code".
+Add to result: ["neet", "code"].
+Move i to 12
+i = 12.
+Find # at j = 13.
+Length = "4" → 4.
+Move i = 14.
+Extract s.substring(14, 18) = "love".
+Add to result: ["neet", "code", "love"].
+Move i = 18.
+i = 18.
+Find # at j = 19.
+Length = "3" → 3.
+Move i = 20.
+Extract s.substring(20, 23) = "you".
+Add to result: ["neet", "code", "love", "you"].
+Move i = 23, which equals s.length(), so stop.
+then after finally return the new array list
